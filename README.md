@@ -12,7 +12,11 @@ The bar pill shows your **session %** (or token count if the API is unavailable)
 
 ## Screenshots
 
-_Coming soon — open the popout from the bar pill to see plan windows, the burn-rate trend, and the per-model token breakdown._
+<img src="screenshots/popout.png" alt="Claude Usage popout: plan limit windows, burn-rate trend, and token breakdown" width="360">
+
+The bar pill shows the session window at `12%` with a `⇈` burst arrow. The popout
+breaks down the plan limit windows, a live burn-rate warning, today's tokens with
+a 7-day chart, and a per-model breakdown.
 
 ## Requirements
 
