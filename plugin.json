@@ -1,0 +1,13 @@
+{
+    "id": "claudeUsage",
+    "name": "Claude Usage",
+    "description": "Claude plan rate-limit windows (like /usage) plus token counts and a burn-rate trend, in the DankBar with a detailed popout",
+    "version": "1.0.0",
+    "author": "jhnhnsn",
+    "type": "widget",
+    "capabilities": ["dankbar-widget"],
+    "component": "./ClaudeUsageWidget.qml",
+    "icon": "smart_toy",
+    "requires": ["python3"],
+    "permissions": ["process"]
+}
