@@ -54,6 +54,29 @@ git -C ~/.config/DankMaterialShell/plugins/claudeUsage pull
 dms ipc call plugins reload claudeUsage
 ```
 
+### Development
+
+If you're editing the plugin (in `~/.config/DankMaterialShell/plugins/claudeUsage`),
+apply changes without restarting dms:
+
+```sh
+dms ipc call plugins reload claudeUsage           # reload after an edit
+```
+
+Tail logs for QML errors / binding loops while iterating:
+
+```sh
+journalctl --user -u dms.service -f | grep -i claudeUsage
+```
+
+The Python scripts can be run and tested on their own:
+
+```sh
+python3 scripts/usage_data.py          # token counts + 7-day summary
+python3 scripts/usage_data.py --rate   # burn-rate ratio
+python3 scripts/fetch_windows.py       # plan windows JSON
+```
+
 ## How it works
 
 | Layer | File | Role |
