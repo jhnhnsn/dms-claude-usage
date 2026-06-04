@@ -24,14 +24,19 @@ No third-party Python packages — everything uses the standard library.
 
 ## Install
 
-Clone into your dms plugins directory:
+Clone into your dms plugins directory, naming the folder `claudeUsage` (the
+plugin's id):
 
 ```sh
-git clone https://github.com/jhnhnsn/dms-claude-usage \
-  ~/.config/DankMaterialShell/plugins/dms-claude-usage
+mkdir -p ~/.config/DankMaterialShell/plugins
+git clone https://github.com/jhnhnsn/dms-claude-usage.git \
+  ~/.config/DankMaterialShell/plugins/claudeUsage
 ```
 
-Then restart dms so it discovers the plugin and enable it:
+> Clone a **real copy**, not a symlink — dms's plugin watcher does not follow
+> symlinked plugin directories.
+
+Then restart dms so it discovers the plugin, and enable it:
 
 ```sh
 systemctl --user restart dms.service     # or however you run dms
@@ -45,7 +50,7 @@ The bundled Python scripts are resolved from the plugin's own directory, so no s
 ### Updating
 
 ```sh
-git -C ~/.config/DankMaterialShell/plugins/dms-claude-usage pull
+git -C ~/.config/DankMaterialShell/plugins/claudeUsage pull
 dms ipc call plugins reload claudeUsage
 ```
 

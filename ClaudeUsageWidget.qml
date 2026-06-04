@@ -267,7 +267,7 @@ PluginComponent {
         PopoutComponent {
             id: pop
             headerText: root.plan !== "" ? ("Claude Usage · " + root.plan) : "Claude Usage"
-            detailsText: "Subscription plan — token counts are usage, not billing"
+            detailsText: "Token counts are usage, not billing"
             showCloseButton: true
 
             Column {
